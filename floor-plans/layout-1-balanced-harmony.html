@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Layout 1: Balanced Harmony</title>
+<style>
+  body { margin: 0; padding: 20px; background: #f5f0eb; font-family: 'Segoe UI', sans-serif; }
+  h1 { text-align: center; color: #2c2c2c; font-size: 24px; }
+  h2 { text-align: center; color: #666; font-size: 16px; font-weight: 400; margin-top: -10px; }
+  .plan-container { display: flex; justify-content: center; margin-top: 20px; }
+  svg { filter: drop-shadow(0 4px 12px rgba(0,0,0,0.1)); }
+  .notes { max-width: 800px; margin: 30px auto; background: #fff; padding: 24px; border-radius: 12px; box-shadow: 0 2px 8px rgba(0,0,0,0.06); }
+  .notes h3 { color: #2c2c2c; margin-top: 0; }
+  .notes ul { color: #444; line-height: 1.8; }
+  .legend { display: flex; flex-wrap: wrap; gap: 12px; margin: 20px auto; max-width: 800px; justify-content: center; }
+  .legend-item { display: flex; align-items: center; gap: 6px; font-size: 13px; color: #555; }
+  .legend-swatch { width: 16px; height: 16px; border-radius: 3px; border: 1px solid #ccc; }
+</style>
+</head>
+<body>
+
+<h1>Layout 1: Balanced Harmony</h1>
+<h2>Desk in each bedroom &bull; Carin sofa centered &bull; Pull-out guest bed in 2nd bedroom</h2>
+
+<div class="legend">
+  <div class="legend-item"><div class="legend-swatch" style="background:#b8d4e3"></div>Beds</div>
+  <div class="legend-item"><div class="legend-swatch" style="background:#d4a574"></div>Desks</div>
+  <div class="legend-item"><div class="legend-swatch" style="background:#8fbc8f"></div>Sofa/Seating</div>
+  <div class="legend-item"><div class="legend-swatch" style="background:#c9b8d9"></div>Storage (PAX/Shelves)</div>
+  <div class="legend-item"><div class="legend-swatch" style="background:#f0c040"></div>Dining</div>
+  <div class="legend-item"><div class="legend-swatch" style="background:#e88"></div>TV/Media</div>
+  <div class="legend-item"><div class="legend-swatch" style="background:#f5deb3"></div>Dog lounge</div>
+</div>
+
+<div class="plan-container">
+<svg viewBox="0 0 820 750" width="820" height="750" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background -->
+  <rect x="0" y="0" width="820" height="750" fill="#f5f0eb" />
+
+  <!-- ============ WALLS ============ -->
+  <!-- Outer walls - approximating the angular shape -->
+  <polygon points="60,30 520,30 680,160 680,380 730,380 730,680 590,680 590,620 400,620 400,680 60,680"
+    fill="#faf8f5" stroke="#2c2c2c" stroke-width="8" />
+
+  <!-- Interior walls -->
+  <!-- Wall between bedroom and kitchen -->
+  <line x1="520" y1="30" x2="520" y2="280" stroke="#2c2c2c" stroke-width="6" />
+  <!-- Wall between living and kitchen (partial) -->
+  <line x1="420" y1="280" x2="680" y2="280" stroke="#2c2c2c" stroke-width="6" />
+  <!-- Door opening to kitchen -->
+  <line x1="420" y1="275" x2="420" y2="285" stroke="#2c2c2c" stroke-width="2" />
+
+  <!-- Wall between living and master bedroom -->
+  <line x1="60" y1="420" x2="380" y2="420" stroke="#2c2c2c" stroke-width="6" />
+  <!-- Door opening master bedroom -->
+  <path d="M 240,420 A 50,50 0 0,1 290,420" fill="none" stroke="#888" stroke-width="1.5" stroke-dasharray="3,3"/>
+  <line x1="240" y1="417" x2="240" y2="423" stroke="#2c2c2c" stroke-width="2" />
+  <line x1="290" y1="417" x2="290" y2="423" stroke="#2c2c2c" stroke-width="2" />
+
+  <!-- Wall between master and bathroom -->
+  <line x1="380" y1="420" x2="380" y2="680" stroke="#2c2c2c" stroke-width="6" />
+  <!-- Bathroom walls -->
+  <line x1="590" y1="420" x2="590" y2="680" stroke="#2c2c2c" stroke-width="6" />
+  <line x1="590" y1="420" x2="730" y2="420" stroke="#2c2c2c" stroke-width="6" />
+  <!-- W/D closet -->
+  <line x1="460" y1="520" x2="540" y2="520" stroke="#2c2c2c" stroke-width="4" />
+  <line x1="460" y1="520" x2="460" y2="620" stroke="#2c2c2c" stroke-width="4" />
+  <line x1="540" y1="520" x2="540" y2="620" stroke="#2c2c2c" stroke-width="4" />
+
+  <!-- Entry door -->
+  <rect x="480" y="674" width="60" height="12" fill="#fff" stroke="#2c2c2c" stroke-width="2"/>
+  <text x="510" y="695" text-anchor="middle" font-size="11" fill="#888">ENTRY</text>
+  <!-- Entry door arc -->
+  <path d="M 480,680 A 50,50 0 0,1 530,630" fill="none" stroke="#888" stroke-width="1.5" stroke-dasharray="3,3"/>
+
+  <!-- Door opening to 2nd bedroom -->
+  <path d="M 440,280 A 50,50 0 0,0 490,280" fill="none" stroke="#888" stroke-width="1.5" stroke-dasharray="3,3"/>
+
+  <!-- ============ ROOM LABELS ============ -->
+  <text x="290" y="180" text-anchor="middle" font-size="14" fill="#999" font-weight="600">BEDROOM</text>
+  <text x="290" y="198" text-anchor="middle" font-size="11" fill="#bbb">15' × 10'6"</text>
+
+  <text x="280" y="340" text-anchor="middle" font-size="14" fill="#999" font-weight="600">DINING / LIVING</text>
+  <text x="280" y="358" text-anchor="middle" font-size="11" fill="#bbb">18' × 12'</text>
+
+  <text x="200" y="540" text-anchor="middle" font-size="14" fill="#999" font-weight="600">MASTER BEDROOM</text>
+  <text x="200" y="558" text-anchor="middle" font-size="11" fill="#bbb">11' × 10'6"</text>
+
+  <text x="600" y="200" text-anchor="middle" font-size="12" fill="#999">KITCHEN</text>
+  <text x="660" y="560" text-anchor="middle" font-size="12" fill="#999">BATH</text>
+  <text x="500" y="580" text-anchor="middle" font-size="11" fill="#999">W/D</text>
+
+  <!-- ============ KITCHEN FIXTURES ============ -->
+  <!-- Refrigerator -->
+  <rect x="560" y="40" width="50" height="60" rx="3" fill="#e0e0e0" stroke="#aaa" stroke-width="1.5"/>
+  <text x="585" y="75" text-anchor="middle" font-size="10" fill="#777">REF</text>
+  <!-- Counter/cabinets -->
+  <rect x="620" y="40" width="50" height="120" rx="2" fill="#e8e0d8" stroke="#bbb" stroke-width="1"/>
+  <!-- DW -->
+  <rect x="620" y="170" width="50" height="50" rx="3" fill="#e0e0e0" stroke="#aaa" stroke-width="1.5"/>
+  <text x="645" y="200" text-anchor="middle" font-size="10" fill="#777">DW</text>
+  <!-- Counter along wall -->
+  <rect x="530" y="170" width="90" height="30" rx="2" fill="#e8e0d8" stroke="#bbb" stroke-width="1"/>
+
+  <!-- ============ BATHROOM FIXTURES ============ -->
+  <ellipse cx="660" cy="640" rx="28" ry="20" fill="#dce8f0" stroke="#aab" stroke-width="1.5"/>
+  <text x="660" y="644" text-anchor="middle" font-size="9" fill="#888">TUB</text>
+  <rect x="600" y="440" width="30" height="25" rx="8" fill="#dce8f0" stroke="#aab" stroke-width="1.5"/>
+  <text x="615" y="457" text-anchor="middle" font-size="8" fill="#888">WC</text>
+  <rect x="600" y="480" width="35" height="22" rx="3" fill="#dce8f0" stroke="#aab" stroke-width="1.5"/>
+  <text x="617" y="495" text-anchor="middle" font-size="8" fill="#888">SINK</text>
+
+  <!-- W/D unit -->
+  <rect x="470" y="540" width="60" height="55" rx="4" fill="#e0e0e0" stroke="#aaa" stroke-width="1.5"/>
+  <text x="500" y="572" text-anchor="middle" font-size="10" fill="#777">W/D</text>
+
+  <!-- ============ LAYOUT 1 FURNITURE ============ -->
+
+  <!-- === MASTER BEDROOM === -->
+  <!-- Queen Bed - command position: head against solid wall, can see door -->
+  <rect x="80" y="460" width="120" height="150" rx="6" fill="#b8d4e3" stroke="#8ab" stroke-width="2"/>
+  <text x="140" y="530" text-anchor="middle" font-size="12" fill="#5a7a8a" font-weight="600">QUEEN</text>
+  <text x="140" y="548" text-anchor="middle" font-size="10" fill="#5a7a8a">BED</text>
+  <!-- Pillows -->
+  <rect x="88" y="468" width="46" height="18" rx="8" fill="#c8dde8" stroke="#9bc" stroke-width="1"/>
+  <rect x="146" y="468" width="46" height="18" rx="8" fill="#c8dde8" stroke="#9bc" stroke-width="1"/>
+  <!-- Nightstand left -->
+  <rect x="80" y="618" width="40" height="40" rx="4" fill="#c9b8d9" stroke="#a99" stroke-width="1.5"/>
+  <text x="100" y="642" text-anchor="middle" font-size="8" fill="#777">NS</text>
+  <!-- Nightstand right -->
+  <rect x="160" y="618" width="40" height="40" rx="4" fill="#c9b8d9" stroke="#a99" stroke-width="1.5"/>
+  <text x="180" y="642" text-anchor="middle" font-size="8" fill="#777">NS</text>
+  <!-- Desk in master - along the wall opposite bed -->
+  <rect x="250" y="440" width="110" height="50" rx="4" fill="#d4a574" stroke="#b88" stroke-width="2"/>
+  <text x="305" y="468" text-anchor="middle" font-size="11" fill="#7a5a3a" font-weight="600">DESK 1</text>
+  <!-- Desk chair -->
+  <circle cx="305" cy="510" r="16" fill="#ddd" stroke="#bbb" stroke-width="1.5"/>
+  <text x="305" y="514" text-anchor="middle" font-size="8" fill="#888">CH</text>
+
+  <!-- === 2ND BEDROOM === -->
+  <!-- Full pull-out sofa bed - feng shui command position -->
+  <rect x="80" y="50" width="130" height="100" rx="6" fill="#b8d4e3" stroke="#8ab" stroke-width="2"/>
+  <rect x="80" y="50" width="130" height="25" rx="6" fill="#8fbc8f" stroke="#7a9" stroke-width="2"/>
+  <text x="145" y="68" text-anchor="middle" font-size="9" fill="#4a6a4a">BACK REST</text>
+  <text x="145" y="110" text-anchor="middle" font-size="11" fill="#5a7a8a" font-weight="600">FULL PULL-OUT</text>
+  <text x="145" y="128" text-anchor="middle" font-size="10" fill="#5a7a8a">SOFA/BED</text>
+
+  <!-- IKEA PAX in 2nd bedroom - along upper angled wall -->
+  <rect x="300" y="50" width="180" height="45" rx="4" fill="#c9b8d9" stroke="#a89" stroke-width="2"/>
+  <text x="390" y="78" text-anchor="middle" font-size="11" fill="#7a6a8a" font-weight="600">IKEA PAX</text>
+
+  <!-- Desk in 2nd bedroom -->
+  <rect x="80" y="195" width="110" height="50" rx="4" fill="#d4a574" stroke="#b88" stroke-width="2"/>
+  <text x="135" y="224" text-anchor="middle" font-size="11" fill="#7a5a3a" font-weight="600">DESK 2</text>
+  <!-- Desk chair -->
+  <circle cx="135" cy="265" r="16" fill="#ddd" stroke="#bbb" stroke-width="1.5"/>
+  <text x="135" y="269" text-anchor="middle" font-size="8" fill="#888">CH</text>
+
+  <!-- Small bookshelf in 2nd bedroom -->
+  <rect x="230" y="195" width="50" height="35" rx="3" fill="#c9b8d9" stroke="#a89" stroke-width="1.5"/>
+  <text x="255" y="216" text-anchor="middle" font-size="8" fill="#777">SHELF</text>
+
+  <!-- === ENTRY === -->
+  <!-- IKEA PAX at entry -->
+  <rect x="395" y="560" width="50" height="110" rx="4" fill="#c9b8d9" stroke="#a89" stroke-width="2"/>
+  <text x="420" y="605" text-anchor="middle" font-size="9" fill="#7a6a8a" font-weight="600" transform="rotate(-90,420,605)">IKEA PAX</text>
+
+  <!-- === LIVING / DINING === -->
+  <!-- Carin Couch from Joybird - centered, facing TV -->
+  <rect x="120" y="300" width="180" height="70" rx="8" fill="#8fbc8f" stroke="#6a9a6a" stroke-width="2"/>
+  <text x="210" y="335" text-anchor="middle" font-size="12" fill="#3a6a3a" font-weight="600">CARIN SOFA</text>
+  <text x="210" y="352" text-anchor="middle" font-size="9" fill="#4a7a4a">(Joybird)</text>
+  <!-- Sofa arm left -->
+  <rect x="120" y="300" width="18" height="70" rx="8" fill="#7aac7a" stroke="#6a9a6a" stroke-width="1"/>
+  <!-- Sofa arm right -->
+  <rect x="282" y="300" width="18" height="70" rx="8" fill="#7aac7a" stroke="#6a9a6a" stroke-width="1"/>
+
+  <!-- TV on wall -->
+  <rect x="105" y="395" width="120" height="8" rx="2" fill="#e88" stroke="#c66" stroke-width="1.5"/>
+  <text x="165" y="413" text-anchor="middle" font-size="10" fill="#c66" font-weight="600">TV</text>
+  <!-- TV console/shelf -->
+  <rect x="100" y="380" width="130" height="16" rx="3" fill="#c9b8d9" stroke="#a89" stroke-width="1.5"/>
+  <text x="165" y="392" text-anchor="middle" font-size="8" fill="#777">MEDIA CONSOLE</text>
+
+  <!-- Coffee table -->
+  <rect x="175" y="385" width="70" height="30" rx="15" fill="none" stroke="#bbb" stroke-width="1.5" stroke-dasharray="4,3"/>
+
+  <!-- Dining area - round table near kitchen -->
+  <circle cx="430" cy="350" r="35" fill="#f0c040" stroke="#d4a030" stroke-width="2"/>
+  <text x="430" y="347" text-anchor="middle" font-size="10" fill="#7a6020" font-weight="600">DINING</text>
+  <text x="430" y="361" text-anchor="middle" font-size="9" fill="#7a6020">TABLE</text>
+  <!-- Chairs around dining table -->
+  <circle cx="430" cy="305" r="12" fill="#f5daa0" stroke="#d4a030" stroke-width="1"/>
+  <circle cx="430" cy="395" r="12" fill="#f5daa0" stroke="#d4a030" stroke-width="1"/>
+  <circle cx="385" cy="350" r="12" fill="#f5daa0" stroke="#d4a030" stroke-width="1"/>
+  <circle cx="475" cy="350" r="12" fill="#f5daa0" stroke="#d4a030" stroke-width="1"/>
+
+  <!-- Multi-functional seating - pouf/ottoman near sofa -->
+  <rect x="320" y="310" width="45" height="45" rx="22" fill="#8fbc8f" stroke="#6a9a6a" stroke-width="1.5" opacity="0.7"/>
+  <text x="342" y="337" text-anchor="middle" font-size="8" fill="#3a6a3a">POUF</text>
+
+  <!-- Dog lounge area - cozy corner near sofa -->
+  <rect x="80" y="300" width="35" height="55" rx="6" fill="#f5deb3" stroke="#d4c090" stroke-width="1.5"/>
+  <text x="97" y="325" text-anchor="middle" font-size="7" fill="#a08040" transform="rotate(-90,97,325)">DOG BED</text>
+
+  <!-- Bookshelf / storage along living wall -->
+  <rect x="540" y="300" width="45" height="80" rx="3" fill="#c9b8d9" stroke="#a89" stroke-width="1.5"/>
+  <text x="562" y="335" text-anchor="middle" font-size="8" fill="#777" transform="rotate(-90,562,335)">SHELVES</text>
+
+  <!-- ============ FENG SHUI ANNOTATIONS ============ -->
+  <!-- Chi flow arrows -->
+  <defs>
+    <marker id="arrow1" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#c4a882"/>
+    </marker>
+  </defs>
+  <!-- Entry chi flow -->
+  <path d="M 510,670 C 510,620 480,570 430,500 C 400,460 350,420 280,380"
+    fill="none" stroke="#c4a882" stroke-width="2" stroke-dasharray="6,4" marker-end="url(#arrow1)" opacity="0.5"/>
+  <text x="530" y="640" font-size="9" fill="#c4a882" font-style="italic">chi flow</text>
+
+</svg>
+</div>
+
+<div class="notes">
+  <h3>Layout 1: Balanced Harmony - Design Notes</h3>
+  <ul>
+    <li><strong>Master Bedroom:</strong> Queen bed in feng shui command position - head against the solid south wall, with a clear sightline to the door. Two nightstands for balance. Desk 1 along the east wall, near natural light, with chair facing the room (not wall-facing for energy flow).</li>
+    <li><strong>2nd Bedroom / Guest Room:</strong> Full-size pull-out sofa/bed against the west wall in command position. IKEA PAX wardrobe along the upper wall for storage. Desk 2 along the lower wall with a bookshelf nearby. When guests aren't visiting, the room functions as a home office.</li>
+    <li><strong>Living / Dining:</strong> The Joybird Carin sofa is centered facing the south wall with TV mounted above a media console. Round dining table (seats 4) near the kitchen pass-through for easy serving. A pouf/ottoman between sofa and dining provides flexible seating for work, lounging, or extra dining.</li>
+    <li><strong>Dog Space:</strong> A dedicated dog bed/lounging area beside the sofa where they can be near you but out of the traffic flow.</li>
+    <li><strong>Entry:</strong> IKEA PAX in the entryway hallway for coats, shoes, and keys - creating an organized first impression.</li>
+    <li><strong>Feng Shui Principles:</strong> Clear chi flow path from entry through living space. No furniture blocking doorways. Beds in command positions. Round dining table promotes harmony. Plants recommended at the entry and living room corners.</li>
+  </ul>
+</div>
+
+</body>
+</html>
